@@ -23,15 +23,15 @@ import toast from "react-hot-toast";
 import { PlusCircle } from "lucide-react";
 
 const initialStocks = {
-  PETR3: 0,
-  VALE3: 0,
-  SUZB3: 0,
-  ITUB4: 0,
-  BBDC4: 0,
-  BBAS3: 0,
-  ELET3: 0,
-  EGIE3: 0,
-  TAEE11: 0,
+  PETR3: "",
+  VALE3: "",
+  SUZB3: "",
+  ITUB4: "",
+  BBDC4: "",
+  BBAS3: "",
+  ELET3: "",
+  EGIE3: "",
+  TAEE11: "",
 };
 
 type Props = {
@@ -44,7 +44,7 @@ export function PortfolioForm({ stocks, updatePortfolio }: Props) {
   const [portfolioName, setPortfolioName] = useState<string>("");
   const [month, setMonth] = useState<string>("01-2024");
   const [selectedStocks, setSelectedStocks] =
-    useState<Record<AssetKey, number>>(initialStocks);
+    useState<Record<AssetKey, string>>(initialStocks);
 
   const handleSubmit = (e: any) => {
     toast.dismiss();
@@ -103,11 +103,11 @@ export function PortfolioForm({ stocks, updatePortfolio }: Props) {
         };
         return data;
       })
-      ?.filter((item) => item.amount >= 1);
+      ?.filter((item) => Number(item.amount) >= 1);
   };
 
   const totalPrice = portfolio()?.reduce((total, item) => {
-    return total + item.amount * item.price;
+    return total + Number(item.amount) * item.price;
   }, 0);
 
   return (

@@ -123,7 +123,7 @@ export function StockFunnelChart({ stocks }: any) {
           </SelectContent>
         </Select>
       </CardHeader>
-      <CardContent className="px-0 pb-10">
+      <CardContent className="px-0">
         <ChartContainer config={chartConfig} className="w-full h-[400px] pl-3">
           <FunnelChart accessibilityLayer>
             <Funnel dataKey="value" data={chartData} isAnimationActive>
