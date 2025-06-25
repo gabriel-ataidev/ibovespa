@@ -266,9 +266,9 @@ export function IndicatorChart({ indicators, type }: Props) {
         {getIndicators()?.map((item: any) => (
           <div
             key={item.stock}
-            className="flex gap-1 px-3 md:gap-3 md:px-5 border-r-2 border-r-[#807f7f] text-xs last:border-0 first:pl-0 last:pr-0"
+            className="flex gap-1 px-3 md:gap-3 md:px-5 border-r-2 border-r-[#807f7f] text-xs items-center last:border-0 first:pl-0 last:pr-0"
           >
-            <span className="font-semibold text-start">{item.stock}</span>
+            <span className="font-semibold text-start leading-none">{item.stock}</span>
             <span>{item.value}</span>
             <span
               className={cn(
