@@ -133,7 +133,7 @@ export function IndicatorChart({ indicators, type }: Props) {
   };
 
   return (
-    <Card className="w-full bg-white border-none shadow-none p-5">
+    <Card className="w-full bg-white border-none shadow-none p-5 place-self-stretch">
       <CardHeader className="flex items-center pb-5 justify-between px-0 flex-row gap-3">
         <CardTitle className="text-xl lg:text-2xl leading-none text-start">
           IBOVESPA x {formatTypeName()}
@@ -266,7 +266,7 @@ export function IndicatorChart({ indicators, type }: Props) {
         {getIndicators()?.map((item: any) => (
           <div
             key={item.stock}
-            className="flex gap-1 px-3 md:gap-3 md:px-5 border-r-2 border-r-[#807f7f] text-xs xl:text-sm last:border-0 first:pl-0 last:pr-0"
+            className="flex gap-1 px-3 md:gap-3 md:px-5 border-r-2 border-r-[#807f7f] text-xs last:border-0 first:pl-0 last:pr-0"
           >
             <span className="font-semibold text-start">{item.stock}</span>
             <span>{item.value}</span>

@@ -117,7 +117,7 @@ export function PortfolioForm({ stocks, updatePortfolio }: Props) {
         <span className="hidden md:block">Adicionar carteira</span>
       </DialogTrigger>
 
-      <DialogContent className="w-[90%] sm:max-w-[400px] overflow-auto max-h-[90%] pt-0">
+      <DialogContent className="w-[90%] sm:max-w-[400px] overflow-auto max-h-[95%] pt-0">
         <DialogHeader className="sticky top-0 bg-white pb-4 pt-6">
           <DialogTitle className="sticky top-0 flex flex-col">
             <span className="text-xl">Carteira de ações</span>
@@ -161,7 +161,7 @@ export function PortfolioForm({ stocks, updatePortfolio }: Props) {
             {assetList.map((item) => (
               <div
                 key={item.value}
-                className="flex justify-between items-center gap-3"
+                className="flex justify-between items-center gap-2"
               >
                 <span>
                   {formatToBRL(stockPrices?.[item.value])} - {item.label}{" "}
@@ -173,7 +173,7 @@ export function PortfolioForm({ stocks, updatePortfolio }: Props) {
                   onChange={(e) =>
                     updateSelectedStocks(item.value, Number(e.target.value))
                   }
-                  className="px-3 py-2 border border-input shadow-xs w-[70px] rounded-md"
+                  className="px-3 py-1 border border-input shadow-xs w-[70px] rounded-md"
                 ></input>
               </div>
             ))}

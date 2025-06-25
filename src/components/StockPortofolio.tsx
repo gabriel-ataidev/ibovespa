@@ -61,7 +61,7 @@ export function StockPortfolio({ stocks }: any) {
         </h1>
         <PortfolioForm updatePortfolio={updatePortfolio} stocks={stocks} />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5">
         {portfolios?.map((item: any, index: number) => (
           <div
             key={index}
