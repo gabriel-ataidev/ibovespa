@@ -17,7 +17,7 @@ export default async function Home() {
       <div className="xl:grid flex w-full flex-col xl:grid-cols-3 items-center gap-5 justify-center bg-gray-100 rounded-md text-center">
         {["dolar_med_mensal", "ipca_acumulado", "selic_mensal"].map((item) => (
           <IndicatorChart
-            indicators={indicators?.data?.slice(0, -5)}
+            indicators={indicators?.data}
             type={item as IndicatorType}
             key={item}
           />
